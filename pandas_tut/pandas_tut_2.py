@@ -25,6 +25,20 @@ data9 = data.loc["B", "Y"]
 
 data10 = data.loc[["A", "B"], ["W", "Z"]]
 
+
+data11 = data10[data10 > 0]
+
+data12 = data6[data6["W"] > 0]
+
+data13 = data6[(data6["W"] > 0) & (data6["Y"] > 0)]
+
+data14 = data6.reset_index()
+
+data15 = ["U", "D", "A", "I"]
+
+data16 = data6
+data16["State"] = data15
+
 print(data)
 print(data1)
 print(data2)
@@ -37,3 +51,10 @@ print(data7)
 print(data8)
 print(data9)
 print(data10)
+
+print(data11)
+print(data12)
+print(data13)
+print(data14)
+print(data15)
+print(data16)
