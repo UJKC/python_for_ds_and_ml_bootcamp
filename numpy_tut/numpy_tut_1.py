@@ -32,3 +32,5 @@ print(math2[:5])
 print(math2[5:])
 print(math3[:1, 1:])
 print(math4)
+
+print(math + math)
