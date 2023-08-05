@@ -46,6 +46,9 @@ inside = [1,2,3,1,2,3]
 hier_index = list(zip(outside,inside))
 hier_index = pd.MultiIndex.from_tuples(hier_index)
 
+#MultiIndex(levels=[['G1', 'G2'], [1, 2, 3]],
+#           labels=[[0, 0, 0, 1, 1, 1], [0, 1, 2, 0, 1, 2]])
+
 data17 = pd.DataFrame(np.random.randn(6, 2), hier_index, ["A", "B"])
 
 data18 = data17.loc["G1"]
