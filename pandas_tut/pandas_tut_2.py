@@ -39,6 +39,24 @@ data15 = ["U", "D", "A", "I"]
 data16 = data6
 data16["State"] = data15
 
+
+# Index Levels
+outside = ['G1','G1','G1','G2','G2','G2']
+inside = [1,2,3,1,2,3]
+hier_index = list(zip(outside,inside))
+hier_index = pd.MultiIndex.from_tuples(hier_index)
+
+data17 = pd.DataFrame(np.random.randn(6, 2), hier_index, ["A", "B"])
+
+data18 = data17.loc["G1"]
+
+data19 = data17.loc["G1"].loc[1]
+
+data20 = data17
+data20.index.names = ["Groups", "Index"]
+
+data21 = data20.xs(1, axis= 0, level= "Index")
+
 print(data)
 print(data1)
 print(data2)
@@ -58,3 +76,9 @@ print(data13)
 print(data14)
 print(data15)
 print(data16)
+
+print(data17)
+print(data18)
+print(data19)
+print(data20)
+print(data21)
