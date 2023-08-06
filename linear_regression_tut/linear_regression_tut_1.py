@@ -55,5 +55,9 @@ coeff_df = pd.DataFrame(lm.coef_,X.columns,columns=['Coefficient'])
 predictions = lm.predict(X_test)
 
 #testing for accuracy by scattering
-plt.scatter(y_test,predictions)
+#plt.scatter(y_test,predictions)
+#plt.show()
+
+#Distribution graph to find accuracy
+sns.distplot((y_test-predictions),bins=50)
 plt.show()
