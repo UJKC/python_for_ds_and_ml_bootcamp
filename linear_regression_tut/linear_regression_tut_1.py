@@ -3,4 +3,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-with open("")
+with open("linear_regression_tut\\USA_Housing.csv") as data:
+    data_pd = pd.read_csv(data)
+
+#print(data_pd)
+print(data_pd.describe())
+
+#total price
+sns.pairplot(data_pd)
+plt.show()
+
+#price distribution
