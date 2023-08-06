@@ -7,10 +7,15 @@ with open("linear_regression_tut\\USA_Housing.csv") as data:
     data_pd = pd.read_csv(data)
 
 #print(data_pd)
-print(data_pd.describe())
+#print(data_pd.describe())
 
 #total price
-sns.pairplot(data_pd)
-plt.show()
+#sns.pairplot(data_pd)
+#plt.show()
 
 #price distribution
+#sns.distplot(data_pd['Price'])
+#plt.show()
+
+#Heatmap
+sns.h
