@@ -18,4 +18,5 @@ with open("linear_regression_tut\\USA_Housing.csv") as data:
 #plt.show()
 
 #Heatmap
-sns.h
+sns.heatmap(data_pd.corr())
+plt.show()
