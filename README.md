@@ -17,3 +17,4 @@ pip install cufflinks
 pip install chart-studio
     import chart_studio.plotly as py
 
+pip install scikit-learn
