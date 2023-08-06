@@ -13,3 +13,7 @@ pip install html5lib
 pip install beautifulsoup4
 
 pip install cufflinks
+
+pip install chart-studio
+    import chart_studio.plotly as py
+
