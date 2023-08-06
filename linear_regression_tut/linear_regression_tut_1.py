@@ -42,11 +42,18 @@ lm = LinearRegression()
 lm.fit(X_train,y_train)
 
 # print the intercept
-print(lm.intercept_)
+#print(lm.intercept_)
 
 # print the coefficient
-print(lm.coef_)
+#print(lm.coef_)
 
 #Answer should be the trained data
 coeff_df = pd.DataFrame(lm.coef_,X.columns,columns=['Coefficient'])
-print(coeff_df)
+#print(coeff_df)
+
+#Predictions from our Mode
+predictions = lm.predict(X_test)
+
+#testing for accuracy by scattering
+plt.scatter(y_test,predictions)
+plt.show()
