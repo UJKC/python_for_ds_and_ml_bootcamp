@@ -39,3 +39,43 @@ plt.show()
 
 #cf.go_offline()
 #data_pd['Fare'].iplot(kind='hist',bins=30,color='green')
+
+#8
+sns.boxplot(x='Pclass',y='Age',data=data_pd,palette='winter')
+plt.show()
+
+
+def impute_age(cols):
+    Age = cols[0]
+    Pclass = cols[1]
+    
+    if pd.isnull(Age):
+
+        if Pclass == 1:
+            return 37
+
+        elif Pclass == 2:
+            return 29
+
+        else:
+            return 24
+
+    else:
+        return Age
+
+data_pd['Age'] = data_pd[['Age','Pclass']].apply(impute_age,axis=1)
+
+#9
+sns.heatmap(data_pd.isnull(),yticklabels=False,cbar=False)
+plt.show()
+
+data_pd.drop('Cabin',axis=1,inplace=True)
+
+data_pd.dropna(inplace=True)
+
+sex = pd.get_dummies(data_pd['Sex'],drop_first=True)
+embark = pd.get_dummies(data_pd['Embarked'],drop_first=True)
+
+train = pd.concat([data_pd,sex,embark],axis=1)
+
+train.drop(['Sex', 'Embarked', 'Name', 'Ticket', 'PassengerId'],axis=1,inplace=True)
