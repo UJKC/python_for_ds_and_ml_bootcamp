@@ -2,7 +2,13 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-import cufflinks as cf
+
+
+from sklearn.model_selection import train_test_split
+
+from sklearn.linear_model import LogisticRegression
+
+from sklearn.metrics import classification_report
 
 with open("logistic_regression_tut\\titanic_train.csv") as data:
     data_pd = pd.read_csv(data)
@@ -79,3 +85,20 @@ embark = pd.get_dummies(data_pd['Embarked'],drop_first=True)
 train = pd.concat([data_pd,sex,embark],axis=1)
 
 train.drop(['Sex', 'Embarked', 'Name', 'Ticket', 'PassengerId'],axis=1,inplace=True)
+
+#split
+X = data_pd.drop('Survived', axis= 1)
+y = data_pd['Survived']
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random_state=101)
+
+#train
+logmodel = LogisticRegression()
+
+logmodel.fit(X_train,y_train)
+
+#predict
+predictions = logmodel.predict(X_test)
+
+#report
+print(classification_report(y_test,predictions))

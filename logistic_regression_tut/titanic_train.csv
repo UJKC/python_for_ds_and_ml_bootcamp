@@ -195,7 +195,6 @@ PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
 194,1,2,"Navratil, Master. Michel M",male,3,1,1,230080,26,F2,S
 195,1,1,"Brown, Mrs. James Joseph (Margaret Tobin)",female,44,0,0,PC 17610,27.7208,B4,C
 196,1,1,"Lurette, Miss. Elise",female,58,0,0,PC 17569,146.5208,B80,C
-197,0,3,"Mernagh, Mr. Robert",male,,0,0,368703,7.75,,Q
 198,0,3,"Olsen, Mr. Karl Siegwart Andreas",male,42,0,1,4579,8.4042,,S
 199,1,3,"Madigan, Miss. Margaret ""Maggie""",female,,0,0,370370,7.75,,Q
 200,0,2,"Yrois, Miss. Henriette (""Mrs Harbeck"")",female,24,0,0,248747,13,,S
@@ -800,13 +799,11 @@ PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
 799,0,3,"Ibrahim Shawah, Mr. Yousseff",male,30,0,0,2685,7.2292,,C
 800,0,3,"Van Impe, Mrs. Jean Baptiste (Rosalie Paula Govaert)",female,30,1,1,345773,24.15,,S
 801,0,2,"Ponesell, Mr. Martin",male,34,0,0,250647,13,,S
-802,1,2,"Collyer, Mrs. Harvey (Charlotte Annie Tate)",female,31,1,1,C.A. 31921,26.25,,S
 803,1,1,"Carter, Master. William Thornton II",male,11,1,2,113760,120,B96 B98,S
 804,1,3,"Thomas, Master. Assad Alexander",male,0.42,0,1,2625,8.5167,,C
 805,1,3,"Hedman, Mr. Oskar Arvid",male,27,0,0,347089,6.975,,S
 806,0,3,"Johansson, Mr. Karl Johan",male,31,0,0,347063,7.775,,S
 807,0,1,"Andrews, Mr. Thomas Jr",male,39,0,0,112050,0,A36,S
-808,0,3,"Pettersson, Miss. Ellen Natalia",female,18,0,0,347087,7.775,,S
 809,0,2,"Meyer, Mr. August",male,39,0,0,248723,13,,S
 810,1,1,"Chambers, Mrs. Norman Campbell (Bertha Griggs)",female,33,1,0,113806,53.1,E8,S
 811,0,3,"Alexander, Mr. William",male,26,0,0,3474,7.8875,,S
