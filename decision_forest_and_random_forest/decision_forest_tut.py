@@ -10,6 +10,14 @@ from sklearn.metrics import classification_report,confusion_matrix
 
 from sklearn.ensemble import RandomForestClassifier
 
+from IPython.display import Image
+
+from sklearn.externals import StringIO
+
+from sklearn.tree import export_graphviz
+
+import pydot
+
 data = pd.read_csv('decision_forest_and_random_forest\kyphosis.csv')
 
 sns.pairplot(data, hue='Kyphosis')
@@ -38,6 +46,25 @@ print(classification_report(y_test,predictions))
 
 # Matrix prediction
 print(confusion_matrix(y_test,predictions))
+
+# Tree display
+
+# Titles
+features = list(df.columns[1:])
+
+# Creating object
+dot_data = StringIO()
+
+# Graph creation
+export_graphviz(dtree, out_file=dot_data,feature_names=features,filled=True,rounded=True)
+
+# Get the value
+graph = pydot.graph_from_dot_data(dot_data.getvalue())
+
+# Image creation
+Image(graph[0].create_png())
+
+plt.show()
 
 # Random Forest
 
