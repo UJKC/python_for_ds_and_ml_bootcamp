@@ -38,3 +38,20 @@ print(classification_report(y_test,predictions))
 
 # Matrix prediction
 print(confusion_matrix(y_test,predictions))
+
+# Random Forest
+
+# Call random foest object
+rfc = RandomForestClassifier(n_estimators=100)
+
+# Fit the data
+rfc.fit(X_train, y_train)
+
+# Make Prediction
+rfc_pred = rfc.predict(X_test)
+
+# Print out Random Forest report
+print(classification_report(y_test,rfc_pred))
+
+# Make confusion matrix
+print(confusion_matrix(y_test,rfc_pred))
