@@ -50,7 +50,7 @@ print(confusion_matrix(y_test,predictions))
 # Tree display
 
 # Titles
-features = list(df.columns[1:])
+features = list(data.columns[1:])
 
 # Creating object
 dot_data = StringIO()
